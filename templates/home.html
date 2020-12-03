@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CABS BOOKING DEMAND</title>
+</head>
+<style>
+    body {
+        background: cadetblue;
+    }
+    
+    header {
+        margin: auto;
+        width: 18%;
+        background-color: white;
+        text-align: center;
+    }
+    
+    h5 {
+        margin: 0px;
+    }
+    
+    .card {
+        border: 1px solid black;
+        margin: 5px auto;
+        width: 15%;
+        padding: 3px;
+        display: table-row-group;
+    }
+</style>
+
+<body>
+    <header>CABS BOOKING DEMAND</header>
+    <form action="\predict" method="POST">
+        <div class="card">
+            <h5 class="card_title">Workingday</h5>
+            <select name="workingday">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        </div>
+        <div class="card">
+            <h5 class="card_title">Temperature</h5>
+            <input type="text" id="temperature" name="temperature" required="required">
+        </div>
+        <div class="card">
+            <h5 class="card_title">Humidity</h5>
+            <input type="text" id="humidity" name="humidity" required="required">
+        </div>
+        <div class="card">
+            <h5 class="card_title">Wind Speed</h5>
+            <input type="text" id="windspeed" name="windspeed" required="required">
+        </div>
+        <div class="card">
+            <h5 class="card_title">Hour</h5>
+            <input type="text" id="hour" name="hour" required="required">
+        </div>
+        <div class="card">
+            <h5 class="card_title">Weekday</h5>
+            <select name="weekday">
+            <option value="sun">Sun</option>
+            <option value="mon">Mon</option>
+            <option value="tue">Tue</option>
+            <option value="wed">Wed</option>
+            <option value="thu">Thu</option>
+            <option value="fri">Fri</option>
+            <option value="sat">Sat</option>
+        </select>
+        </div>
+        <div class="card">
+            <h5 class="card_title">Month</h5>
+            <select name="month">
+            <option value="jan">Jan</option>
+            <option value="feb">Feb</option>
+            <option value="mar">Mar</option>
+            <option value="apr">Apr</option>
+            <option value="may">May</option>
+            <option value="jun">Jun</option>
+            <option value="jul">Jul</option>
+            <option value="aug">Aug</option>
+            <option value="sep">Sep</option>
+            <option value="oct">Oct</option>
+            <option value="nov">Nov</option>
+            <option value="dec">Dec</option>
+        </select>
+            <div class="card">
+                <h5 class="card_title">Season</h5>
+                <select name="season">
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="autumn">Autumn</option>
+            <option value="winter">Winter</option>
+        </select>
+                <div class="card">
+                    <h5 class="card_title">Weather</h5>
+                    <select name="weather">
+            <option value="heavy">Heavy Rain or Thunderstorm</option>
+            <option value="light">Light Rain or Light Snow</option>
+            <option value="mist">Mist or Cloudy</option>
+            <option value="clear">Clear or Few Clouds</option>
+        </select>
+    </form>
+    <br>
+    <br>
+    <input type="submit" value="Submit" class="btn">
+    </form>
+    <br>
+    <br>
+    <h3>{{ prediction_text }}</h3>
+
+    <br>
+    <br>
+    <p>©2020 Ajay Salwani</p>
+
+</body>
+
+</html>
